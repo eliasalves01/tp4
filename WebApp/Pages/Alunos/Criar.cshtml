@@ -1,0 +1,25 @@
+﻿@page
+@model WebApp.Pages.Alunos.CriarModel
+
+<h2>Criar Aluno</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Aluno.Nome"></label>
+        <input asp-for="Aluno.Nome" class="form-control" />
+        <span asp-validation-for="Aluno.Nome" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Aluno.Sobrenome"></label>
+        <input asp-for="Aluno.Sobrenome" class="form-control" />
+        <span asp-validation-for="Aluno.Sobrenome" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Criar</button>
+</form>
+
+<div>
+    @if (ViewData["Mensagem"] != null)
+    {
+        <h3>@ViewData["Mensagem"]</h3>
+    }
+</div>
